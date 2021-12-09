@@ -974,6 +974,12 @@ footer .footer__link:hover {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .author-header {
+    height: 115vh;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .author-header {
     height: 125vh;
