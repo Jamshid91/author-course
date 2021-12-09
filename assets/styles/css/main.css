@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../../fonts/Nunito-ExtraLight.woff2") format("woff2");
+  src: url("../../fonts/Nunito-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../../fonts/Nunito-Light.woff2") format("woff2");
+  src: url("../../fonts/Nunito-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -31,7 +31,7 @@
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../../fonts/Nunito-Regular.woff2") format("woff2");
+  src: url("../../fonts/Nunito-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -39,7 +39,7 @@
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../../fonts/Nunito-SemiBold.woff2") format("woff2");
+  src: url("../../fonts/Nunito-Medium.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -47,7 +47,7 @@
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../../fonts/Nunito-Bold.woff2") format("woff2");
+  src: url("../../fonts/Nunito-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -55,7 +55,7 @@
 
 @font-face {
   font-family: 'Nunito';
-  src: url("../../fonts/Nunito-ExtraBold.woff2") format("woff2");
+  src: url("../../fonts/Nunito-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -121,7 +121,7 @@ input, textarea {
 }
 
 .lavelUp-btn:hover {
-  opacity: .8;
+  opacity: .9;
 }
 
 .bc-btn {
@@ -136,7 +136,7 @@ input, textarea {
 }
 
 .bc-btn:hover {
-  opacity: .8;
+  opacity: .9;
 }
 
 .author-title__text {
@@ -154,14 +154,30 @@ input, textarea {
   -webkit-background-size: cover;
           background-size: cover;
   padding: 60px 0 40px 0;
+  position: relative;
+}
+
+.author-header .filter-bgc {
+  position: absolute;
+  right: 0;
+  bottom: 130px;
+  width: 75%;
+  height: 140px;
+  background-color: rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  z-index: 0;
 }
 
 .author-header-item {
-  width: 100%;
+  width: 110%;
   height: auto;
-  padding: 34px 70px 20px 70px;
+  padding: 34px 70px 20px 140px;
   background-color: var(--white);
   margin-top: 48px;
+  margin-left: -103px;
+  position: relative;
+  z-index: 2;
 }
 
 .author-header-item .author__img {
@@ -207,7 +223,7 @@ input, textarea {
 }
 
 .author-header .contact-list img:hover {
-  opacity: .8;
+  opacity: .9;
 }
 
 .author-header .btn-moreInfo {
@@ -219,6 +235,8 @@ input, textarea {
   transition: .3s;
   font-size: 18px;
   font-weight: 700;
+  position: relative;
+  z-index: 2;
 }
 
 .author-header .btn-moreInfo:hover {
@@ -228,6 +246,8 @@ input, textarea {
 
 .author-header .author-header-btns {
   margin-top: 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .author-header .author-header-btns .button-left,
@@ -249,23 +269,11 @@ input, textarea {
   border: 1px solid var(--blue);
 }
 
-.author-header .author-header-btns .button-left:hover {
-  background-color: transparent;
-  border: 1px solid var(--white);
-  color: var(--white);
-}
-
 .author-header .author-header-btns .button-right {
   background-color: transparent;
   border: 1px solid var(--white);
   color: var(--white);
   margin-left: 20px;
-}
-
-.author-header .author-header-btns .button-right:hover {
-  background-color: var(--blue);
-  color: var(--white);
-  border: 1px solid var(--blue);
 }
 
 .author-courses .courses-card {
@@ -275,11 +283,6 @@ input, textarea {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
-}
-
-.author-courses .courses-card:hover {
-  -webkit-box-shadow: 0px 0px 15px -2px var(--dark-gray);
-          box-shadow: 0px 0px 15px -2px var(--dark-gray);
 }
 
 .author-courses .courses-card-img {
@@ -320,7 +323,7 @@ input, textarea {
 }
 
 .author-courses .courses-card .card-info-list {
-  border: 1px solid var(--dark-gray);
+  border: 1px solid var(--gray);
   border-top: none;
   -webkit-border-bottom-left-radius: 4px;
           border-bottom-left-radius: 4px;
@@ -424,11 +427,6 @@ input, textarea {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
-}
-
-.author-events .events-card:hover {
-  -webkit-box-shadow: 0px 0px 15px -2px var(--dark-gray);
-          box-shadow: 0px 0px 15px -2px var(--dark-gray);
 }
 
 .author-events .events-card-img {
@@ -618,7 +616,7 @@ input, textarea {
 
 .reviews .review-left__btn:hover,
 .reviews .review-right__btn:hover {
-  opacity: .8;
+  opacity: .9;
 }
 
 .reviews .review-left__btn {
