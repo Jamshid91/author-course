@@ -484,6 +484,29 @@ input, textarea {
         }
     }
 
+    .reviews__height {
+        max-height: 300px;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 50px;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: var(--gray);
+        }
+        &::-webkit-scrollbar-thumb {
+            background:  var(--blue);
+        }
+    }
+
+    .addScrollReviews {
+        max-height: 600px;
+        overflow-y: scroll;
+    }
+
     &-list {
         margin-top: 30px;
         &__photo {

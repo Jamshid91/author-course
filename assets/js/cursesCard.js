@@ -5,6 +5,8 @@ let check = 0;
 let moreInfoBtn = document.querySelector('.author-header-item .btn-moreInfo');
 let moreInfoItem = document.querySelector('.author-header-item');
 let hiddenInfo = document.querySelector('.author-header-item .hidden-info');
+let showReviews = document.querySelector('.show_reviews');
+let reviewsHeight = document.querySelector('.reviews__height');
 
 checkHeartAuthor.addEventListener('click', () => {
     checkHeartAuthor.classList.toggle('fas')
@@ -34,6 +36,21 @@ moreInfoBtn.addEventListener('click', () => {
         return infoText = 1
     } else {
         moreInfoBtn.textContent = 'Подробнее'
+        return infoText = 0
+    }
+});
+
+let revNum = 0;
+showReviews.addEventListener('click', () => {
+    reviewsHeight.classList.add('addScrollReviews');
+
+    if(infoText == 0) {
+        reviewsHeight.classList.add('addScrollReviews');
+        showReviews.textContent = 'Закрыть отзывы'
+        return infoText = 1
+    } else {
+        reviewsHeight.classList.remove('addScrollReviews');
+        showReviews.textContent = 'Показать все отзывы'
         return infoText = 0
     }
 });
