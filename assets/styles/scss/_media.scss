@@ -11,7 +11,6 @@
 // TABLET
 @media screen and(max-width: 1024px) {
     .author-header {
-        height: 120vh;
         padding: 20px 0 20px 0;
 
         &-item {
@@ -74,6 +73,9 @@
             height: 50px;
             font-size: 18px;
             }
+        }
+        .filter-bgc {
+            display: none;
         }
     }
 

@@ -1,5 +1,5 @@
 let checkHeartAuthor = document.querySelector('.author-header-item .fa-heart');
-let checkHeart = document.querySelectorAll('.courses-card .check-heart');
+let checkHeart = document.querySelectorAll('.check-heart');
 let check = 0;
 
 let moreInfoBtn = document.querySelector('.author-header-item .btn-moreInfo');
