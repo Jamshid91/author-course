@@ -402,7 +402,7 @@ input, textarea {
 }
 
 .consultations-item .consultations__btn {
-  width: 340px;
+  width: 300px;
   height: 60px;
   background-color: var(--blue);
   color: var(--white);
