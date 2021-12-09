@@ -90,14 +90,13 @@ input, textarea {
     }
 
     &-item {
-        width: 110%;
+        width: 1040px;
         height: auto;
-        padding: 34px 70px 20px 140px;
+        padding: 34px 70px 20px 70px;
         background-color: var(--white);
         margin-top: 48px;
-        margin-left: -103px;
-        position: relative;
-        z-index: 2;
+        position: absolute;
+        z-index: 99;
 
         .author__img {
             margin-right: 40px;
@@ -127,6 +126,39 @@ input, textarea {
             margin-top: 41px;
             margin-bottom: 18px;
         }
+        .hidden-info {
+            max-height: 140px;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .openHiddenInfo {
+            max-height: none;
+        }
+        .hidden-list {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            margin-bottom: 50px;
+
+            .left-info__text {
+                color: var(--blue);
+                font-weight: 600;
+                width: 20%;
+            }
+
+            .right-info__text {
+                width: 75%;
+                font-size: 20px;
+                font-weight: 600;
+                color: var(--black);
+            }
+            .right__title-sup {
+                color: var(--dark-gray);
+            }
+        }
+
         .contact-item {
             margin-top: 25px;
 
@@ -135,6 +167,9 @@ input, textarea {
                 font-weight: 600;
             }
         }
+    }
+    .openHidden {
+        box-shadow: 0px 1px 15px -2px #000000;
     }
     .contact-list img:hover{
         opacity: .9;
@@ -146,7 +181,9 @@ input, textarea {
         transition: .3s;
         font-size: 18px;
         font-weight: 700;
-        position: relative;
+        position: absolute;
+        bottom: -50px;
+        right: 0;
         z-index: 2;
         &:hover {
             background-color: var(--blue);
@@ -154,10 +191,19 @@ input, textarea {
         }
     }
 
+    .openedBtn {
+        box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.75);
+    }
+
     .author-header-btns {
         margin-top: 40px;
-        position: relative;
+        position: absolute;
         z-index: 2;
+        display: flex;
+        justify-content: center;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
         .button-left,
         .button-right {
             width: 430px;
@@ -283,6 +329,7 @@ input, textarea {
         &__title {
             font-size: 24px;
             font-weight: 600;
+            color: var(--black);
         }
 
         &__price {

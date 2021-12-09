@@ -2,6 +2,10 @@ let checkHeartAuthor = document.querySelector('.author-header-item .fa-heart');
 let checkHeart = document.querySelectorAll('.courses-card .check-heart');
 let check = 0;
 
+let moreInfoBtn = document.querySelector('.author-header-item .btn-moreInfo');
+let moreInfoItem = document.querySelector('.author-header-item');
+let hiddenInfo = document.querySelector('.author-header-item .hidden-info');
+
 checkHeartAuthor.addEventListener('click', () => {
     checkHeartAuthor.classList.toggle('fas')
 })
@@ -16,4 +20,20 @@ checkHeart.forEach(heart => {
             return check = 0
         }
     })
-})
+});
+
+
+let infoText = 0;
+moreInfoBtn.addEventListener('click', () => {
+    hiddenInfo.classList.toggle('openHiddenInfo');
+    moreInfoItem.classList.toggle('openHidden');
+    moreInfoBtn.classList.toggle('openedBtn');
+
+    if(infoText == 0) {
+        moreInfoBtn.textContent = 'Скрыть'
+        return infoText = 1
+    } else {
+        moreInfoBtn.textContent = 'Подробнее'
+        return infoText = 0
+    }
+});
