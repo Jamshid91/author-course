@@ -100,7 +100,7 @@
 
     .reviews {
         &-list {
-            &__photo {
+            .review-user-photo {
                 margin-right: 15px;
                 width: 60px;
             }
@@ -149,8 +149,6 @@
         }
         &-item {
             padding: 15px;
-
-            
             .author-photo {
                 width: 90px !important;
                 height: 90px !important;
@@ -227,23 +225,13 @@
 }
 
 @media screen and(max-width: 420px) {
-    .author-header {
-        height: 100vh;
-    }
 }
 
-@media screen and(max-width: 375px) {
-    .author-header {
-        height: 115vh;
-    }
-}
-@media screen and(max-width: 360px) {
-    .author-header {
-        height: 125vh;
-    }
-}
 @media screen and(max-width: 320px) {
     .author-header {
-        height: 140vh;
+                    
+        .contact-list img{
+            width: 28px;
+        }
     }
 }

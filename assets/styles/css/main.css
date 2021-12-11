@@ -173,12 +173,18 @@ input, textarea {
   z-index: 0;
 }
 
+.author-header .position-height {
+  width: 100%;
+  height: 470px;
+  margin-top: 48px;
+  position: relative;
+}
+
 .author-header-item {
-  width: 1040px;
+  width: 100%;
   height: auto;
   padding: 34px 70px 20px 70px;
   background-color: var(--white);
-  margin-top: 48px;
   position: absolute;
   z-index: 99;
 }
@@ -386,12 +392,14 @@ input, textarea {
           border-top-left-radius: 4px;
 }
 
-.author-courses .courses-card-img .courses-card-phto {
+.author-courses .courses-card-img .courses-card-photo {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .author-courses .courses-card-img .degree {
@@ -437,6 +445,35 @@ input, textarea {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.author-courses .courses-card .card-info-list .author-photo {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: relative;
+}
+
+.author-courses .courses-card .card-info-list .author-photo__img {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.author-courses .courses-card .card-info-list .author-photo .pro__img {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .author-courses .courses-card .card-info-list .position {
@@ -696,8 +733,25 @@ input, textarea {
   margin-top: 30px;
 }
 
-.reviews-list__photo {
+.reviews-list .review-user-photo {
+  width: 70px;
+  height: 70px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: relative;
   margin-right: 30px;
+}
+
+.reviews-list .review-user-photo .user-photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .reviews-list .user__name {
@@ -857,7 +911,7 @@ footer .footer__link:hover {
     font-size: 20px;
     margin-top: 25px;
   }
-  .reviews-list__photo {
+  .reviews-list .review-user-photo {
     margin-right: 15px;
     width: 60px;
   }
@@ -987,26 +1041,8 @@ footer .footer__link:hover {
   }
 }
 
-@media screen and (max-width: 420px) {
-  .author-header {
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .author-header {
-    height: 115vh;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .author-header {
-    height: 125vh;
-  }
-}
-
 @media screen and (max-width: 320px) {
-  .author-header {
-    height: 140vh;
+  .author-header .contact-list img {
+    width: 28px;
   }
 }
