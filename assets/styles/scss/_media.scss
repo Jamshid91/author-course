@@ -14,7 +14,6 @@
         padding: 20px 0 20px 0;
 
         &-item {
-            width: 96%;
             padding: 20px 30px 20px 30px;
             margin-left: 0;
 
@@ -102,7 +101,8 @@
         &-list {
             .review-user-photo {
                 margin-right: 15px;
-                width: 60px;
+                width: 55px;
+                height: 55px;
             }
             .mobile-reviews {
                 display: flex;

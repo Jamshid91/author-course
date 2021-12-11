@@ -828,7 +828,6 @@ footer .footer__link:hover {
     padding: 20px 0 20px 0;
   }
   .author-header-item {
-    width: 96%;
     padding: 20px 30px 20px 30px;
     margin-left: 0;
   }
@@ -913,7 +912,8 @@ footer .footer__link:hover {
   }
   .reviews-list .review-user-photo {
     margin-right: 15px;
-    width: 60px;
+    width: 55px;
+    height: 55px;
   }
   .reviews-list .mobile-reviews {
     display: -webkit-box;
